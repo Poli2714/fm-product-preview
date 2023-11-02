@@ -32,11 +32,16 @@ body {
   display: flex;
 
   overflow: hidden;
-  width: 700px;
+  max-width: 700px;
 }
 
-.product-img img {
+.desktop-img {
   height: 100%;
+  max-width: 350px;
+}
+
+.mobile-img {
+  display: none;
 }
 
 .product-info {
@@ -113,4 +118,39 @@ body {
   color: hsl(228, 45%, 44%);
   font-size: 11px;
   text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .product-card {
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+    height: 100%;
+    min-width: 400px;
+  }
+
+  .product-info {
+    gap: 1.2rem;
+    max-width: 400px;
+  }
+
+  .category {
+    font-size: 0.8rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .product-name {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
 }
