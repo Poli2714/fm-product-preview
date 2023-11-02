@@ -117,7 +117,12 @@ body {
 .attribution {
   color: hsl(228, 45%, 44%);
   font-size: 11px;
+  padding-bottom: 0.5rem;
   text-align: center;
+}
+
+.attribution a:nth-of-type(2) {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 700px) {
